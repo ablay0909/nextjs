@@ -3,22 +3,16 @@ import { PrismaClient } from '@prisma/client'
 import prisma from '../../lib/prisma'
 
 export default async function handler(req, res) {
-
+  let a = 25;
   const allUsers = await prisma.field_data.create({
 
-    data : {
-      fieldid : 2,
-      productid : 2,
-      field_value : "TFT"
+    data: {
+      fieldid: 2,
+      productid: 2,
+      field_value: "TFT"
     },
 
-  // where : {
-  //   id : 1
-  // }, 
-  // include : {
-  //   field_data : true
-  // }
-})
+  })
 
   res.status(200);
 }
